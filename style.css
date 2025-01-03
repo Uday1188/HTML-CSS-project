@@ -1,0 +1,275 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px; 
+    margin-right: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.logo:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 10px whitesmoke;
+    cursor: pointer; 
+}
+
+.menu a {
+    position: relative;
+    padding: 10px 15px; 
+    text-decoration: none;
+    color: white;
+    display: inline-block; 
+    transition: all 0.3s ease; 
+}
+
+.menu a:hover {
+    font-weight: bold;
+    color: black; 
+    background-color: white; 
+    box-shadow: 0 4px 10px whitesmoke;
+    border-radius: 5px; 
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-right i {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px; 
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%; 
+    left: 10%;
+    transform: translateY(-50%); 
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 300px;
+    text-align: left; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+    }
+
+    .hero-text {
+        left: 5%; 
+        max-width: 90%; 
+        font-size: 14px; 
+        padding: 15px;
+    }
+}
+
+/* Image Grid Section */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px;
+}
+
+.grid-item {
+    flex: 1;
+    min-width: calc(20% - 10px);
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.grid-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* Footer */
+
+.footer {
+    background-color: black;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-container > div {
+    flex: 1 1 calc(25% - 20px);
+    min-width: 200px;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #f5f5f5;
+}
+
+.footer p,
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 8px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-container > div {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+/* Login Page */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Ensure form text is centered */
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-container button:hover {
+    background: #555;
+}
+.form-container button a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .image-grid {
+        flex-direction: column;
+    }
+}
